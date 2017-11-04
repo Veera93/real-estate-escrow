@@ -1,0 +1,11 @@
+{
+  "name": "on-the-block-client",
+  "version": "0.0.1",
+  "description": "AngularJS frontend for on-the-block. A UBHacks project",
+  "main": "index.html",
+  "author": "Charlie Campanella, Rychard Hunt, Veerappan Saravanan",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "http-server": "^0.10.0"
+  }
+}
