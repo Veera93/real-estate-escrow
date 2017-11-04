@@ -1,0 +1,6 @@
+# Untracked Directories
+node_modules
+
+# Untracked file types
+.DS_STORE
+.git
