@@ -12,7 +12,8 @@
         templateUrl: 'components/landing/landing-view.html'
       })
       .when('/sell', {
-        templateUrl: 'components/sell/sell-view.html'
+        templateUrl: 'components/sell/sell-view.html',
+        controller: 'SellController'
       })
       .otherwise({
         redirectTo:'/'

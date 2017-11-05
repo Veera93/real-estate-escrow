@@ -6,19 +6,26 @@
     >
   </content-header-image>
   <content-padding-standard>
-    <div flex="100">
+    <div flex="100" flex-gt-sm="70" flex-offset-gt-sm="15">
       <md-card>
         <md-card-title>
           <md-card-title-text>
-            <span class="md-headline"><strong>Listing Details</strong></span>
+            <span class="md-headline"><i class="fa fa-info-circle"></i> <strong>Listing Details</strong></span>
           </md-card-title-text>
         </md-card-title>
         <md-divider></md-divider>
         <md-card-content>
-          <md-input-container>
-           <label>Title</label>
-           <input ng-model="user.title">
-         </md-input-container>
+          <form class="custom-form" flex="100">
+            <input placeholder="Full Name" ng-model="sellData.fullName" maxlength="25" flex="100">
+            <input placeholder="Email Address" ng-model="sellData.emailAddress" maxlength="50" flex="100">
+            <input placeholder="Address of Sold Home" ng-model="sellData.address" maxlength="75" flex="100">
+            <input type="number" placeholder="Minimum Price of Sold Home (USD)" ng-model="sellData.price" maxlength="7" flex="100">
+            <input type="number" placeholder="Square Footage" ng-model="sellData.squareFeet" flex="100">
+            <input type="number" placeholder="Number of Bedrooms" ng-model="sellData.bedroomCount" flex="100">
+            <input placeholder="Image URL" ng-model="sellData.imageUrl" flex="100">
+            <br>
+            <md-button class="md-button-custom md-button-custom-padded full-width" ng-class="{'md-disabled': !canSubmit(), 'md-accent': canSubmit()}" ng-disabled="!canSubmit()">Submit</md-button>
+          </form>
         </md-card-content>
       </md-card>
     </div>
