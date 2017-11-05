@@ -7,7 +7,16 @@
   app.controller('LandingController', ['$scope', 'HelperFactory', 'ValidationFactory',
   function($scope, HelperFactory, ValidationFactory) {
     $scope.stateData = {
-      loading: false
+      loading: false,
+      houseId: localStorage.getItem('houseId'),
+      house: false
     }
+    $scope.init = function() {
+      var houseId = $scope.stateData.houseId
+      if (houseId) {
+        $scope.stateData.house = getHouseDetails(houseId)
+      }
+    }
+    $scope.init()
   }])
 })();

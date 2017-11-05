@@ -64,25 +64,44 @@ function customerFilter() {
   events.watch(function(error, result){
     if (!error){
       if(result.event === "NewHouse") {
-        console.log("NewHouse:");
         result.args.basePrice = result.args.basePrice.toNumber();
         result.args.bedRooms = result.args.bedRooms.toNumber();
         result.args.blockNo = result.args.blockNo.toNumber();
         result.args.house = result.args.house.toNumber();
         result.args.squareFeet = result.args.squareFeet.toNumber();
-        console.dir(result);
+        console.log("Block No.",result.args.blockNo)
+
+        console.log("Base Price ",result.args.basePrice)
+        console.log("Bed Rooms ",result.args.bedRooms)
+        console.log("House ",result.args.house)
+        console.log("Square Feet ",result.args.squareFeet)
+        console.log("Location ",result.args.location)
+        console.log("ownerEmail ",result.args.ownerEmail)
+        console.log("ownerName ",result.args.ownerName)
+        console.log("-----------------------------------------")
+        //console.dir(result);
       } else if(result.event === "NewProposal") {
         console.log("NewProposal:");
         result.args.blockNo = result.args.blockNo.toNumber();
         result.args.house = result.args.house.toNumber();
         result.args.lifetime = result.args.lifetime.toNumber();
         result.args.price = result.args.price.toNumber();
-        console.dir(result);
+        console.log("Block No ", result.args.blockNo);
+        console.log("House ", result.args.house);
+        console.log("Life Time ", result.args.lifetime);
+        console.log("Price ", result.args.price);
+        console.log("Buyer Name ", result.args.buyerName)
+        console.log("-----------------------------------------")
+        //console.dir(result);
       } else if(result.event === "SoldHouse") {
         console.log("SoldHouse: ");
         result.args.blockNo = result.args.blockNo.toNumber();
         result.args.house = result.args.house.toNumber();
-        console.dir(result);
+        console.log("Block No ", result.args.blockNo);
+        console.log("House ", result.args.house);
+        console.log("Owner ", result.args.oldOwner);
+        console.log("-----------------------------------------")
+        //console.dir(result);
       }
     }
 
@@ -135,7 +154,7 @@ function getProposalDetails(_houseId) {
 function addProposal(_houseId, _buyerName, _price, _lifetime) {
   var contractInstance = createInstanceBuyer();
   var estimatedGas = 4700000;
-  var money = 101
+  var money = 100001
 
   var    txnObject = {
       from: buyerweb3.eth.coinbase,

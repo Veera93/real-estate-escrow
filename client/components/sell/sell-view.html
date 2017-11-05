@@ -7,7 +7,7 @@
   </content-header-image>
   <content-padding-standard>
     <div flex="100" flex-gt-sm="70" flex-offset-gt-sm="15">
-      <md-card>
+      <md-card ng-show="!stateData.submitted">
         <md-card-title>
           <md-card-title-text>
             <span class="md-headline"><i class="fa fa-info-circle"></i> <strong>Listing Details</strong></span>
@@ -26,6 +26,17 @@
             <br>
             <md-button class="md-button-custom md-button-custom-padded full-width" ng-class="{'md-disabled': !canSubmit(), 'md-accent': canSubmit()}" ng-disabled="!canSubmit()" ng-click="submit()">Submit</md-button>
           </form>
+        </md-card-content>
+      </md-card>
+      <md-card ng-show="stateData.submitted">
+        <md-card-title>
+          <md-card-title-text>
+            <span class="md-headline"><i class="fa fa-star"></i> <strong>Listing Submitted!</strong></span>
+          </md-card-title-text>
+        </md-card-title>
+        <md-divider></md-divider>
+        <md-card-content>
+          You have successfully posted your listing. It is now available for viewing by potential buyers on the marketplace!
         </md-card-content>
       </md-card>
     </div>

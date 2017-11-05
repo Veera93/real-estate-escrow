@@ -137,6 +137,11 @@ a:hover {
   .md-card-custom md-card-actions {
     padding: 5px;
   }
+
+  .md-card-custom img {
+    height: 200px;
+    overflow: hidden;
+  }
 /* End Cards */
 
 /* Forms */

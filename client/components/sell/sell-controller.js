@@ -8,16 +8,17 @@
   function($scope, HelperFactory, ValidationFactory) {
     $scope.sellData = { // Data submitted to BlockChain and API
       id: parseInt(HelperFactory.currentUnixTime()),
-      fullName: "",
-      emailAddress: "",
-      address: "",
-      price: "",
-      squareFeet: "",
-      bedroomCount: "",
-      imageUrl: ""
+      fullName: "Veera",
+      emailAddress: "veera@gmail.com",
+      address: "Buffalo",
+      price: 100000,
+      squareFeet: 2000,
+      bedroomCount: 5,
+      imageUrl: "http://bit.ly/2y2Rmqu"
     }
     $scope.stateData = {
-      loading: false
+      loading: false,
+      submitted: false
     }
     $scope.canSubmit = function() {
       if (!$scope.sellData.fullName || !ValidationFactory.isString($scope.sellData.fullName) || !ValidationFactory.checkStringLength($scope.sellData.fullName, 1, 25)) {
@@ -39,6 +40,10 @@
     }
     $scope.submit = function() {
       $scope.stateData.loading = true
+      setHouseDetails($scope.sellData.id, $scope.sellData.emailAddress, $scope.sellData.price, $scope.sellData.address, $scope.sellData.fullName, $scope.sellData.imageUrl, $scope.sellData.bedroomCount, $scope.sellData.squareFeet)
+      localStorage.setItem('houseId', $scope.sellData.id)
+      $scope.stateData.loading = false
+      $scope.stateData.submitted = true
     }
   }])
 })();
