@@ -1,0 +1,109 @@
+html, body {
+  font-family: 'Cabin', sans-serif!important;
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+.center-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Color Schemes */
+.md-primary {
+  background-color: #16a085!important;
+  color: #ecf0f1!important;
+}
+.md-primary-inverse {
+  color: #16a085!important;
+}
+.md-accent {
+  background-color: #2980b9!important;
+  color: #ecf0f1!important;
+}
+.md-accent-inverse {
+  color: #2980b9!important;
+}
+/* End Color Schemes */
+
+/* Site Outline Classes */
+.site-header {
+  background-color: #FFFFFF!important;
+  color: #16a085!important;
+  -webkit-box-shadow: 0 5px 7px -8px #998;
+  -moz-box-shadow: 0 5px 7px -8px #998;
+  box-shadow: 0 5px 7px -8px #998;
+}
+.site-footer {
+  background-color: #16a085;
+  color: #FFFFFF;
+  padding: 30px;
+}
+.site-footer-column {
+  margin-top: 10px;
+}
+
+.site-footer-column span:first-child {
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.site-footer-column span {
+  margin-bottom: 10px;
+}
+
+.site-footer-column span a {
+  text-decoration: none;
+}
+
+.site-footer-copyright {
+  text-align: center;
+  font-size: .75rem;
+  padding-top: 10px;
+}
+/* End Site Outline */
+
+/* Site Content */
+  .content-header-image {
+    padding: 50px;
+    padding-top: 75px;
+    padding-bottom: 75px;
+    background-position: center!important;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #FFFFFF;
+    text-align: center;
+  }
+  .content-header-image h3 {
+    color: #dddddd;
+    margin-top: 0px;
+  }
+
+  .content-padding-standard {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+/* End Site Content */
+
+/* Buttons */
+  md-button {
+    font-weight: bolder!important;
+  }
+  .md-button-custom {
+    font-weight: 800!important;
+    border-radius: 50px!important;
+    padding-left: 15px!important;
+    padding-right: 15px!important;
+  }
+  .md-button-custom-padded {
+    font-size: 1.25rem;
+    padding: 10px!important;
+    padding-left: 40px!important;
+    padding-right: 40px!important;
+    text-transform: none!important;
+  }
+/* End Buttons */
