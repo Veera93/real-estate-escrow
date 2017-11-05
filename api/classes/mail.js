@@ -45,13 +45,10 @@ class Mail {
     const that = this
     return new Promise(function(resolve, reject) {
       var data = {
-        from: config.constants.developer_name + '<' + that.from + '>',
+        from: config.constants.appName + '<' + that.from + '>',
         to: that.to,
         subject: that.subject,
         html: that.content
-      }
-      if (config.constants.env !== 'production') { //Only send emails while in production
-        resolve("Sent!")
       }
       mailgun.messages().send(data, function(error, body) {
         if (error) {

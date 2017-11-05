@@ -1,3 +1,5 @@
 const types = require('./types')
 
-module.export = types
+module.exports = {
+  types: types
+}
