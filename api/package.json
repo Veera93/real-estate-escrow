@@ -1,0 +1,22 @@
+{
+  "name": "on-the-block-api",
+  "version": "0.0.1",
+  "description": "Node/Express API",
+  "main": "app.js",
+  "scripts": {
+    "start": "./node_modules/nodemon/bin/nodemon.js app"
+  },
+  "author": "RychardHunt",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "express-force-https": "^1.0.0",
+    "helmet": "^3.9.0",
+    "hpp": "^0.2.2",
+    "mongoose": "^4.13.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.12.1"
+  }
+}
