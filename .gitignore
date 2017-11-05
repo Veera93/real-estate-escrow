@@ -1,3 +1,4 @@
 api/config/keys.js
 node_modules
 .git
+.DS_STORE
