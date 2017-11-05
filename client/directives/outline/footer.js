@@ -13,7 +13,7 @@
                         OnTheBlock\
                       </span>\
                       <span>\
-                        <a ng-click=''>About</a>\
+                        <a ng-click='navigation.goAbout()'>About</a>\
                       </span>\
                       <span>\
                         <a ng-click='navigation.goLanding()'>Buy Homes</a>\

@@ -1,0 +1,30 @@
+<site-outline>
+  <content-header-image
+    title="75 Lynbrook Ave."
+    subtitle="$127,000 | 3 Bedrooms | 1,024 Square Feet"
+    image="assets/img/sell/header.jpg"
+    >
+  </content-header-image>
+  <content-padding-standard>
+    <div flex="100" flex-gt-sm="70" flex-offset-gt-sm="15">
+      <md-card>
+        <md-card-title>
+          <md-card-title-text>
+            <span class="md-headline"><i class="fa fa-money"></i> <strong>Purchase Home</strong></span>
+            <span class="md-subtitle">This home is being sold by <strong>Charlie Campanella</strong> for $127,000</span>
+          </md-card-title-text>
+        </md-card-title>
+        <md-divider></md-divider>
+        <md-card-content>
+          <form class="custom-form" flex="100">
+            <input placeholder="Full Name" ng-model="buyData.fullName" maxlength="25" flex="100">
+            <input placeholder="Email Address" ng-model="buyData.emailAddress" maxlength="50" flex="100">
+            <input type="number" placeholder="Offer ($127,000+)" ng-model="buyData.offer" maxlength="7" flex="100">
+            <br>
+            <md-button class="md-button-custom md-button-custom-padded full-width" ng-class="{'md-disabled': !canSubmit(), 'md-accent': canSubmit()}" ng-disabled="!canSubmit()" ng-click="submit()">Submit Purchase Offer</md-button>
+          </form>
+        </md-card-content>
+      </md-card>
+    </div>
+  </content-padding-standard>
+</site-outline>

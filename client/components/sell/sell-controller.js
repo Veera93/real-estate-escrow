@@ -16,6 +16,9 @@
       bedroomCount: "",
       imageUrl: ""
     }
+    $scope.stateData = {
+      loading: false
+    }
     $scope.canSubmit = function() {
       if (!$scope.sellData.fullName || !ValidationFactory.isString($scope.sellData.fullName) || !ValidationFactory.checkStringLength($scope.sellData.fullName, 1, 25)) {
         return false
@@ -33,6 +36,9 @@
         return false
       }
       return true
+    }
+    $scope.submit = function() {
+      $scope.stateData.loading = true
     }
   }])
 })();

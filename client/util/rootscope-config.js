@@ -8,7 +8,9 @@
   function($rootScope, NavigationFactory) {
     $rootScope.navigation = {
       scrollTo: NavigationFactory.scrollTo,
+      goAbout: NavigationFactory.goAbout,
       goLanding: NavigationFactory.goLanding,
+      goPurchase: NavigationFactory.goPurchase,
       goSell: NavigationFactory.goSell
     }
     return {}

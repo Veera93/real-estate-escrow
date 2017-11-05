@@ -24,10 +24,11 @@
             <input type="number" placeholder="Number of Bedrooms" ng-model="sellData.bedroomCount" flex="100">
             <input placeholder="Image URL" ng-model="sellData.imageUrl" flex="100">
             <br>
-            <md-button class="md-button-custom md-button-custom-padded full-width" ng-class="{'md-disabled': !canSubmit(), 'md-accent': canSubmit()}" ng-disabled="!canSubmit()">Submit</md-button>
+            <md-button class="md-button-custom md-button-custom-padded full-width" ng-class="{'md-disabled': !canSubmit(), 'md-accent': canSubmit()}" ng-disabled="!canSubmit()" ng-click="submit()">Submit</md-button>
           </form>
         </md-card-content>
       </md-card>
     </div>
   </content-padding-standard>
 </site-outline>
+<site-loading ng-if="stateData.loading">Please wait</site-loading>

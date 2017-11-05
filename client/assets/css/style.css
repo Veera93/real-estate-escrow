@@ -73,6 +73,17 @@ a:hover {
   font-size: .75rem;
   padding-top: 10px;
 }
+
+.site-loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  color: #FFFFFF;
+}
 /* End Site Outline */
 
 /* Site Content */
@@ -119,7 +130,12 @@ a:hover {
 /* Cards */
   .md-card-custom:hover {
     cursor: pointer!important;
-    filter: brightness(75%);
+  }
+  .md-card-custom small {
+    color: #aaaaaa;
+  }
+  .md-card-custom md-card-actions {
+    padding: 5px;
   }
 /* End Cards */
 
@@ -139,12 +155,5 @@ a:hover {
     -webkit-appearance: none;
     appearance: none;
     background-color: #FFFFFF;
-  }
-
-  .custom-form md-button[disabled] {
-    background-color: red!important;
-  }
-  .ng-disabled {
-    background-color: red!important;
   }
 /* End Forms */

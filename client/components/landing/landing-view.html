@@ -14,32 +14,45 @@
       <div flex="100" layout="row">
         <div flex="33">
           <md-card class="md-card-custom">
-           <img src="assets/img/landing/header.jpg" class="md-card-image" alt="image caption">
-           <md-card-content>
-             <h2>$104,000 <br><small>3 Bedrooms, 2,100 sqft</small></h2>
-             <p><i class='fa fa-map-marker'></i> Tonawanda, New York</p>
-           </md-card-content>
+            <img src="assets/img/landing/header.jpg" class="md-card-image" alt="image caption">
+            <md-card-content>
+              <h2>$104,000 <br><small>3 Bedrooms, 2,100 sqft</small></h2>
+              <p><i class='fa fa-map-marker'></i> Tonawanda, New York</p>
+            </md-card-content>
+            <md-divider></md-divider>
+            <md-card-actions layout="row" layout-align="center center">
+              <md-button class="md-button-custom md-button-custom full-width md-accent" ng-click="navigation.goPurchase('1')">Purchase Home</md-button>
+            </md-card-actions>
           </md-card>
         </div>
         <div flex="33">
           <md-card class="md-card-custom">
-           <img src="assets/img/landing/header.jpg" class="md-card-image" alt="image caption">
-           <md-card-content>
-             <h2>$104,000 <br><small>3 Bedrooms, 2,100 sqft</small></h2>
-             <p><i class='fa fa-map-marker'></i> Tonawanda, New York</p>
-           </md-card-content>
+            <img src="assets/img/landing/header.jpg" class="md-card-image" alt="image caption">
+            <md-card-content>
+              <h2>$104,000 <br><small>3 Bedrooms, 2,100 sqft</small></h2>
+              <p><i class='fa fa-map-marker'></i> Tonawanda, New York</p>
+            </md-card-content>
+            <md-divider></md-divider>
+            <md-card-actions layout="row" layout-align="center center">
+              <md-button class="md-button-custom md-button-custom full-width md-accent" ng-click="navigation.goPurchase('2')">Purchase Home</md-button>
+            </md-card-actions>
           </md-card>
         </div>
         <div flex="33">
           <md-card class="md-card-custom">
-           <img src="assets/img/landing/header.jpg" class="md-card-image" alt="image caption">
-           <md-card-content>
-             <h2>$104,000 <br><small>3 Bedrooms, 2,100 sqft</small></h2>
-             <p><i class='fa fa-map-marker'></i> Tonawanda, New York</p>
-           </md-card-content>
+            <img src="assets/img/landing/header.jpg" class="md-card-image" alt="image caption">
+            <md-card-content>
+              <h2>$104,000 <br><small>3 Bedrooms, 2,100 sqft</small></h2>
+              <p><i class='fa fa-map-marker'></i> Tonawanda, New York</p>
+            </md-card-content>
+            <md-divider></md-divider>
+            <md-card-actions layout="row" layout-align="center center">
+              <md-button class="md-button-custom md-button-custom full-width md-accent" ng-click="navigation.goPurchase('3')">Purchase Home</md-button>
+            </md-card-actions>
           </md-card>
         </div>
       </div>
     </div>
   </content-padding-standard>
 </site-outline>
+<site-loading ng-show='stateData.loading'></site-loading>
